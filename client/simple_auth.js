@@ -1,5 +1,6 @@
+Meteor.subscribe("users");
+Meteor.subscribe("lists");
 
-Lists = new Meteor.Collection("lists");
 
 //if (Meteor.isClient) {
   Template.hello.greeting = function () {
