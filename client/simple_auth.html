@@ -10,6 +10,9 @@
   	{{> hello}}
 
   	<br>
+  	{{> add_list}}
+
+  	<br>
   	{{> lists}}
 
 </body>
@@ -23,9 +26,17 @@
 
 <template name="lists">
 	{{#each lists}}
-		{{list_name}}
 		<input name="list_name" 
 			   value="{{list_name}}" class="list_names" />
+			   {{owner}}
 		<br>
 	{{/each}}
+</template>
+
+<template name="add_list">
+	Add new List:
+	<input name="new_list_name" 
+		   id="new_list_name" />
+	<button id="new_list_button">Add</button>
+	<br>
 </template>
